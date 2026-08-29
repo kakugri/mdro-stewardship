@@ -4,8 +4,10 @@ set -euo pipefail
 
 required_files=(
   "index.html"
+  "artifact.html"
   "styles.css"
   "app.js"
+  "artifact.js"
   "assets/Marious_Akugri_Rapid_MDRO_Diagnostic_Stewardship_Public_Artifact_Suite_v1_0_public_reference_release.pdf"
   "assets/00_implementation_map_and_release_notes.md"
   "assets/01_public_technical_note.md"
@@ -31,5 +33,8 @@ grep -q "Rapid MDRO Diagnostic Stewardship" index.html
 grep -q "Public reference release, version 1.0" index.html
 grep -q "No patient data, employer SOPs, or institutional adoption claims" index.html
 grep -q "Marious_Akugri_Rapid_MDRO_Diagnostic_Stewardship_Public_Artifact_Suite_v1_0_public_reference_release.pdf" index.html
+grep -q "artifact.html?doc=public-technical-note" index.html
+grep -q "Markdown source" artifact.html
+grep -q "00_implementation_map_and_release_notes.md" artifact.js
 
 echo "Static-link and boundary preflight passed."

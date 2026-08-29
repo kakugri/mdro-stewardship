@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artifact Viewer | Rapid MDRO Diagnostic Stewardship Workflow</title>
+  <meta name="author" content="Marious Akugri">
+  <meta name="theme-color" content="#f4f8f8">
+  <meta name="description" content="Readable public artifact page for the Rapid MDRO Diagnostic Stewardship Workflow and LIS alert/comment reference.">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="artifact.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#top" aria-label="Rapid MDRO Diagnostic Stewardship home">
+      <span class="brand-mark" aria-hidden="true">MDRO</span>
+      <span>
+        <strong>Rapid MDRO Diagnostic Stewardship</strong>
+        <small>Public artifact viewer</small>
+      </span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="index.html#builder">Workflow Builder</a>
+      <a href="index.html#comments">Comment Bank</a>
+      <a href="index.html#cases">Dry-Run Cases</a>
+      <a href="index.html#library">Library</a>
+    </nav>
+  </header>
+
+  <main class="artifact-main">
+    <section class="artifact-hero">
+      <p class="eyebrow">Artifact Library</p>
+      <h1 id="artifact-title">Loading artifact</h1>
+      <p id="artifact-summary">
+        This page renders a public, non-confidential artifact from the rapid MDRO diagnostic
+        stewardship reference suite.
+      </p>
+      <div class="action-row">
+        <a class="primary-action" href="index.html#library">Back to library</a>
+        <a class="secondary-action" id="pdf-link" href="assets/Marious_Akugri_Rapid_MDRO_Diagnostic_Stewardship_Public_Artifact_Suite_v1_0_public_reference_release.pdf">Full reference PDF</a>
+        <a class="secondary-action" id="source-link" href="#">Markdown source</a>
+      </div>
+    </section>
+
+    <article class="artifact-content" id="artifact-content" aria-live="polite">
+      <p>Loading artifact content...</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Version 1.0 public reference release. Author: Marious Akugri.</p>
+    <p>This public reference package is for laboratory workflow review and education. Local policy, laboratory director review, medical oversight, and regulatory requirements control any implementation.</p>
+  </footer>
+</body>
+</html>
