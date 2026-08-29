@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapid MDRO Diagnostic Stewardship Workflow</title>
+  <meta name="author" content="Marious Akugri">
+  <meta name="theme-color" content="#f4f8f8">
+  <meta name="description" content="A laboratory-scoped rapid MDRO diagnostic stewardship workflow, dry-run scenario tool, and LIS alert/comment reference for high-complexity clinical laboratories.">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Rapid MDRO Diagnostic Stewardship home">
+      <span class="brand-mark" aria-hidden="true">MDRO</span>
+      <span>
+        <strong>Rapid MDRO Diagnostic Stewardship</strong>
+        <small>Laboratory workflow reference</small>
+      </span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#builder">Workflow Builder</a>
+      <a href="#comments">Comment Bank</a>
+      <a href="#cases">Dry-Run Cases</a>
+      <a href="#review-path">Review Path</a>
+      <a href="#library">Library</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="overview-band">
+      <div class="overview-grid">
+        <div class="overview-copy">
+          <p class="eyebrow">Public reference release, version 1.0</p>
+          <h1>Laboratory-facing rapid MDRO diagnostic stewardship workflow.</h1>
+          <p class="lede">
+            A public, non-confidential dry-run reference for result-status review, reflex and
+            confirmatory follow-up, LIS alert/comment drafting, notification documentation, TAT
+            tracking, and staff training around rapid MDRO-relevant laboratory findings.
+          </p>
+          <div class="action-row">
+            <a class="primary-action" href="#builder">Open workflow builder</a>
+            <a class="secondary-action" href="assets/Marious_Akugri_Rapid_MDRO_Diagnostic_Stewardship_Public_Artifact_Suite_v1_0_public_reference_release.pdf">Download reference PDF</a>
+          </div>
+        </div>
+        <aside class="boundary-panel" aria-label="Scope and safety boundary">
+          <h2>Scope Boundary</h2>
+          <ul>
+            <li>Laboratory communication and diagnostic stewardship support.</li>
+            <li>Synthetic examples and public guidance only.</li>
+            <li>No patient data, employer SOPs, or institutional adoption claims.</li>
+            <li>No live LIS configuration or clinical assay validation claim.</li>
+            <li>No treatment, prescribing, isolation, transfer, or reporting direction.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section summary-strip" aria-label="Current package summary">
+      <article>
+        <span>01</span>
+        <strong>Status-aware</strong>
+        <p>Preliminary, final, corrected, pending AST, and confirmation-dependent paths are kept separate.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <strong>Dry-run safe</strong>
+        <p>Examples use placeholders and synthetic scenarios rather than patient or employer information.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <strong>Locally governed</strong>
+        <p>Any real use remains subject to laboratory director, medical, quality, LIS, and institutional review.</p>
+      </article>
+    </section>
+
+    <section class="content-section review-path" id="review-path">
+      <div class="section-heading">
+        <p class="eyebrow">Review Path</p>
+        <h2>How to evaluate the package quickly</h2>
+        <p>
+          The reviewer path is designed to make technical feedback specific. Reviewers can test
+          the workflow against synthetic scenarios, compare output language to the comment bank,
+          and return a focused memo, checklist, or signed letter.
+        </p>
+      </div>
+
+      <div class="path-grid">
+        <article>
+          <span>1</span>
+          <strong>Confirm the boundary</strong>
+          <p>Read the scope and non-scope statements before evaluating any sample workflow.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <strong>Run dry cases</strong>
+          <p>Load rapid marker, C. auris, corrected-result, and discrepant-result examples.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <strong>Check wording</strong>
+          <p>Compare generated output with neutral LIS comment examples and local-policy caveats.</p>
+        </article>
+        <article>
+          <span>4</span>
+          <strong>Return focused feedback</strong>
+          <p>Use the reviewer checklist to identify strengths, limits, and useful revisions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="builder">
+      <div class="section-heading">
+        <p class="eyebrow">Workflow Builder</p>
+        <h2>Generate a dry-run result communication packet</h2>
+        <p>
+          This local browser tool creates status-aware sample wording and documentation prompts
+          from synthetic inputs. It does not store data or contact a server.
+        </p>
+      </div>
+
+      <div class="builder-layout">
+        <form class="builder-panel" id="workflow-form">
+          <label for="trigger">Rapid MDRO-relevant trigger</label>
+          <select id="trigger" name="trigger">
+            <option value="rapid_marker">Rapid organism/resistance marker</option>
+            <option value="ast_pending">Organism identified, AST pending</option>
+            <option value="c_auris_pending">Suspected Candida auris, confirmation pending</option>
+            <option value="c_auris_confirmed">Confirmed Candida auris result</option>
+            <option value="corrected">Corrected or amended laboratory result</option>
+            <option value="discrepant">Discrepant rapid/culture-AST finding</option>
+            <option value="negative_pending">Negative rapid target, culture pending</option>
+          </select>
+
+          <label for="status">Current result status</label>
+          <select id="status" name="status">
+            <option value="preliminary">Preliminary</option>
+            <option value="pending_confirmation">Pending confirmation</option>
+            <option value="ast_pending">AST pending</option>
+            <option value="final">Final</option>
+            <option value="corrected">Corrected</option>
+          </select>
+
+          <label for="organism">Organism or result placeholder</label>
+          <input id="organism" name="organism" type="text" value="[organism]" maxlength="80">
+
+          <label for="marker">Resistance marker or result category</label>
+          <input id="marker" name="marker" type="text" value="[resistance marker]" maxlength="80">
+
+          <fieldset>
+            <legend>Local-policy routes to consider</legend>
+            <label class="check-row"><input type="checkbox" name="route" value="infection prevention" checked> Infection prevention awareness</label>
+            <label class="check-row"><input type="checkbox" name="route" value="antimicrobial stewardship"> Stewardship awareness</label>
+            <label class="check-row"><input type="checkbox" name="route" value="laboratory supervisor review" checked> Laboratory supervisor review</label>
+            <label class="check-row"><input type="checkbox" name="route" value="transfer communication"> Transfer communication reminder</label>
+          </fieldset>
+
+          <div class="button-row">
+            <button type="button" id="generate-output">Generate packet</button>
+            <button type="button" class="quiet-button" id="reset-builder">Reset</button>
+          </div>
+        </form>
+
+        <section class="output-panel" aria-live="polite">
+          <div class="output-header">
+            <p class="eyebrow">Dry-Run Output</p>
+            <button type="button" class="quiet-button" data-copy-target="packet-output">Copy packet</button>
+          </div>
+          <div id="packet-output">
+            <h3 id="output-title">Rapid organism or resistance-marker signal</h3>
+            <p id="output-summary">Generate a packet to see workflow routing, neutral comment wording, and documentation prompts.</p>
+            <div class="output-block">
+              <strong>Suggested neutral comment</strong>
+              <p id="output-comment">No sample generated yet.</p>
+            </div>
+            <div class="output-block">
+              <strong>Workflow route</strong>
+              <ul id="output-route"></ul>
+            </div>
+            <div class="output-block">
+              <strong>Documentation prompts</strong>
+              <ul id="output-docs"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="content-section" id="comments">
+      <div class="section-heading">
+        <p class="eyebrow">LIS Comment Bank</p>
+        <h2>Neutral wording examples for local review</h2>
+        <p>
+          These examples state laboratory status and pending follow-up while avoiding treatment
+          direction. Local governance controls any real LIS wording.
+        </p>
+      </div>
+
+      <div class="comment-bank" id="comment-bank">
+        <article>
+          <span class="tag">Preliminary rapid result</span>
+          <p>Rapid molecular testing detected [organism] from [specimen type]. Culture and/or susceptibility testing may be pending. Correlate with final laboratory results and institutional notification protocols.</p>
+          <button type="button" class="quiet-button" data-copy-text="Rapid molecular testing detected [organism] from [specimen type]. Culture and/or susceptibility testing may be pending. Correlate with final laboratory results and institutional notification protocols.">Copy</button>
+        </article>
+        <article>
+          <span class="tag">Resistance marker, AST pending</span>
+          <p>Rapid molecular testing detected [resistance marker]. Phenotypic susceptibility testing may be pending. Correlate with final AST and institutional notification protocols.</p>
+          <button type="button" class="quiet-button" data-copy-text="Rapid molecular testing detected [resistance marker]. Phenotypic susceptibility testing may be pending. Correlate with final AST and institutional notification protocols.">Copy</button>
+        </article>
+        <article>
+          <span class="tag">C. auris pending</span>
+          <p>Preliminary laboratory finding raises concern for Candida auris. Confirmatory identification and institutional notification steps may be pending according to local protocol.</p>
+          <button type="button" class="quiet-button" data-copy-text="Preliminary laboratory finding raises concern for Candida auris. Confirmatory identification and institutional notification steps may be pending according to local protocol.">Copy</button>
+        </article>
+        <article>
+          <span class="tag">C. auris confirmed</span>
+          <p>Candida auris identified by [method]. Follow institutional infection prevention, communication, and reporting protocols as applicable.</p>
+          <button type="button" class="quiet-button" data-copy-text="Candida auris identified by [method]. Follow institutional infection prevention, communication, and reporting protocols as applicable.">Copy</button>
+        </article>
+        <article>
+          <span class="tag">Corrected result</span>
+          <p>Corrected laboratory result issued for [organism/result category]. Prior preliminary or final communication may require review according to local corrected-result notification policy.</p>
+          <button type="button" class="quiet-button" data-copy-text="Corrected laboratory result issued for [organism/result category]. Prior preliminary or final communication may require review according to local corrected-result notification policy.">Copy</button>
+        </article>
+        <article>
+          <span class="tag">Discrepant result</span>
+          <p>Rapid result and follow-up culture and/or susceptibility findings require technical review. Interpret according to final corrected laboratory report and local documentation protocol.</p>
+          <button type="button" class="quiet-button" data-copy-text="Rapid result and follow-up culture and/or susceptibility findings require technical review. Interpret according to final corrected laboratory report and local documentation protocol.">Copy</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="cases">
+      <div class="section-heading">
+        <p class="eyebrow">Synthetic Dry-Run Cases</p>
+        <h2>Load a case into the workflow builder</h2>
+        <p>
+          The scenarios test whether the workflow handles preliminary findings, pending
+          confirmation, final AST follow-up, C. auris status, and corrected-result communication.
+        </p>
+      </div>
+
+      <div class="case-grid">
+        <article>
+          <h3>S1. Rapid marker with AST pending</h3>
+          <p>A blood culture rapid molecular panel detects Organism X and Resistance Marker Y. Culture and AST are pending.</p>
+          <button type="button" data-load-case="rapid_marker">Load case</button>
+        </article>
+        <article>
+          <h3>S2. Organism ID with AST pending</h3>
+          <p>An organism is identified, but antimicrobial susceptibility testing has not finalized.</p>
+          <button type="button" data-load-case="ast_pending">Load case</button>
+        </article>
+        <article>
+          <h3>S3. Suspected C. auris</h3>
+          <p>Yeast identification suggests possible C. auris, but confirmatory testing or reference review is pending.</p>
+          <button type="button" data-load-case="c_auris_pending">Load case</button>
+        </article>
+        <article>
+          <h3>S4. Confirmed C. auris</h3>
+          <p>A locally approved or reference method confirms C. auris and local routing may apply.</p>
+          <button type="button" data-load-case="c_auris_confirmed">Load case</button>
+        </article>
+        <article>
+          <h3>S5. Corrected organism ID</h3>
+          <p>A final organism identification is corrected after an earlier preliminary communication.</p>
+          <button type="button" data-load-case="corrected">Load case</button>
+        </article>
+        <article>
+          <h3>S6. Negative rapid, culture pending</h3>
+          <p>A rapid target is not detected, but culture or other final laboratory workup remains pending.</p>
+          <button type="button" data-load-case="negative_pending">Load case</button>
+        </article>
+        <article>
+          <h3>S7. Discrepant rapid/culture result</h3>
+          <p>A rapid result detects a marker, but later culture or AST context does not clearly align.</p>
+          <button type="button" data-load-case="discrepant">Load case</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="review">
+      <div class="section-heading">
+        <p class="eyebrow">Reviewer Checklist</p>
+        <h2>Technical review questions</h2>
+      </div>
+      <div class="review-layout">
+        <div class="review-copy">
+          <p>
+            Reviewers should evaluate technical usefulness, laboratory realism, wording discipline,
+            and safety boundaries. The package is not presented as an approved institutional
+            protocol, clinical validation record, or evidence of adoption.
+          </p>
+          <p>
+            Suitable reviewers may include laboratory directors, microbiology supervisors,
+            molecular diagnostics professionals, infection preventionists, antimicrobial stewardship
+            pharmacists, infectious disease physicians, or laboratory quality professionals.
+          </p>
+        </div>
+        <div class="checklist-panel">
+          <h3>Core Checks</h3>
+          <ul>
+            <li>Understandable to laboratory professionals.</li>
+            <li>Realistic for high-complexity laboratory review.</li>
+            <li>Clear about preliminary, final, corrected, pending, and confirmation-dependent results.</li>
+            <li>Neutral in LIS comment wording.</li>
+            <li>Adaptable by more than one laboratory under local governance.</li>
+            <li>Specific about limits, revisions, and useful next steps.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="library">
+      <div class="section-heading">
+        <p class="eyebrow">Artifact Library</p>
+        <h2>Download the reference materials</h2>
+      </div>
+      <div class="library-list">
+        <a href="assets/Marious_Akugri_Rapid_MDRO_Diagnostic_Stewardship_Public_Artifact_Suite_v1_0_public_reference_release.pdf">Full reference PDF</a>
+        <a href="assets/00_implementation_map_and_release_notes.md">Implementation map and release notes</a>
+        <a href="assets/01_public_technical_note.md">Public technical note</a>
+        <a href="assets/02_rapid_mdro_result_to_action_decision_tree.md">Rapid MDRO result-to-action decision tree</a>
+        <a href="assets/03_reflex_confirmatory_testing_matrix.md">Reflex and confirmatory testing matrix</a>
+        <a href="assets/04_lis_alert_comment_templates.md">LIS alert and comment template bank</a>
+        <a href="assets/05_tat_escalation_metric_plan.md">TAT and escalation metric plan</a>
+        <a href="assets/06_staff_training_checklist.md">Staff training checklist</a>
+        <a href="assets/07_result_status_taxonomy.md">Result-status taxonomy</a>
+        <a href="assets/08_synthetic_validation_scenarios.md">Synthetic validation scenarios</a>
+        <a href="assets/09_reviewer_feedback_checklist.md">Reviewer feedback checklist</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <div class="section-heading">
+        <p class="eyebrow">Public Source Basis</p>
+        <h2>Official context used for background</h2>
+      </div>
+      <div class="source-list">
+        <a href="https://www.cdc.gov/patient-safety/hcp/hospital-dx-excellence/index.html">CDC Core Elements of Hospital Diagnostic Excellence Programs</a>
+        <a href="https://www.cdc.gov/antibiotic-use/hcp/core-elements/hospital.html">CDC Core Elements of Hospital Antibiotic Stewardship Programs</a>
+        <a href="https://www.cdc.gov/healthcare-associated-infections/php/preventing-mdros/mdro-containment-strategy.html">CDC MDRO Containment Strategy</a>
+        <a href="https://www.cdc.gov/candida-auris/hcp/infection-control/index.html">CDC C. auris Infection Control Guidance</a>
+        <a href="https://www.cdc.gov/candida-auris/hcp/laboratories/index.html">CDC C. auris Laboratory Information</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Version 1.0 public reference release. Author: Marious Akugri.</p>
+    <p>This public reference package is for laboratory workflow review and education. Local policy, laboratory director review, medical oversight, and regulatory requirements control any implementation.</p>
+  </footer>
+</body>
+</html>
