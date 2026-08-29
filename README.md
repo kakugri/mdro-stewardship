@@ -38,7 +38,7 @@ This repository is prepared for GitHub Pages with:
 
 Before first deployment, enable `Pages -> GitHub Actions` in the repository settings.
 
-After deployment, capture the live site from the Marious EB-2 NIW workspace:
+After deployment, capture the live site from the Marious EB-2 NIW workspace. From `/home/kingdom/NIW`, run:
 
 ```bash
 node immigration-workspace-private/Marious-Akugri-EB2-NIW/04_evidence-build/scripts/capture_hosted_public_site.js https://kakugri.dev/mdro-stewardship/
