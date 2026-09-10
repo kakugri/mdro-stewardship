@@ -49,11 +49,11 @@ Avoid language that:
 - bypasses local institutional policy; or
 - claims adoption by any institution.
 
-## Placeholder Terms
+## Locally Adaptable Example Terms
 
-Use placeholders until locally approved language is created:
+Use the bracketed example terms below to show where locally approved laboratory language would be inserted during a governed adaptation process:
 
-| Placeholder | Meaning |
+| Example Term | Meaning |
 |---|---|
 | `[organism]` | Organism detected or identified. |
 | `[resistance marker]` | Molecular resistance marker or resistance-related finding. |
