@@ -47,7 +47,7 @@ Please mark the materials reviewed.
 
 | Review Area | Rating Or Notes |
 |---|---|
-| The suite is understandable to laboratory professionals. |  |
+| The package is understandable to laboratory professionals. |  |
 | The proposed workflow is realistic for high-complexity laboratory review. |  |
 | The package stays within laboratory communication and diagnostic stewardship support. |  |
 | The package avoids treatment guidance and patient-specific clinical direction. |  |

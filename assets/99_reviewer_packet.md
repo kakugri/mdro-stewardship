@@ -76,7 +76,7 @@ Please evaluate whether the artifact suite:
 
 ### Laboratory Scope
 
-1. Does the suite stay within laboratory communication and diagnostic stewardship support?
+1. Does the package stay within laboratory communication and diagnostic stewardship support?
 2. Does any section appear to direct clinical care, medication choice, isolation orders, or transfer decisions?
 3. Are local policy, laboratory director, medical director, infection prevention, stewardship, quality, and LIS governance roles respected?
 
@@ -90,7 +90,7 @@ Please evaluate whether the artifact suite:
 
 ### Safety And Confidentiality
 
-1. Does the suite avoid patient data and employer-confidential procedures?
+1. Does the package avoid patient data and employer-confidential procedures?
 2. Are synthetic examples clearly marked?
 3. Are there any claims of adoption, implementation, or institutional approval that should be removed?
 4. Are there any sections that need stronger warnings or boundaries?
@@ -122,14 +122,14 @@ If a reviewer later chooses to write a signed technical review letter, useful to
 
 - professional background and relevance to clinical laboratory, microbiology, molecular diagnostics, infection prevention, stewardship, quality, or healthcare operations;
 - materials reviewed;
-- whether the suite is technically coherent;
-- whether the suite is laboratory-scoped and non-prescriptive;
-- whether the suite addresses a practical communication gap around rapid MDRO-related results;
+- whether the package is technically coherent;
+- whether the package is laboratory-scoped and non-prescriptive;
+- whether the package addresses a practical communication gap around rapid MDRO-related results;
 - whether the artifacts are public, non-confidential, and adaptable;
 - whether the synthetic scenarios and result-status taxonomy make the package easier to review or adapt;
 - whether Marious's documented laboratory background appears relevant to the work;
 - limitations or revisions recommended; and
-- whether continued development and review of the suite would be useful.
+- whether continued development and review of the public reference materials would be useful.
 
 The reviewer should avoid legal conclusions, immigration conclusions, unsupported adoption claims, and statements that the package is an approved institutional protocol.
 

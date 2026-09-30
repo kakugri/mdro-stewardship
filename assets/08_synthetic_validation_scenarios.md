@@ -42,7 +42,7 @@ For each scenario, a reviewer may ask:
 
 ## Pass Criteria For Reviewer Assessment
 
-A scenario passes dry-run review if the suite:
+A scenario passes dry-run review if the workflow:
 
 - identifies the correct result-status category;
 - avoids overstating preliminary or confirmation-pending results;
@@ -66,4 +66,4 @@ Reviewers should flag any wording that:
 
 ## Reviewer Notes
 
-The goal of these scenarios is practical coherence. A reviewer does not need to agree with every sample comment to find the suite useful; the key question is whether the package provides a safe, adaptable framework for laboratory review and local revision.
+The goal of these scenarios is practical coherence. A reviewer does not need to agree with every sample comment to find the package useful; the key question is whether the package provides a safe, adaptable framework for laboratory review and local revision.
